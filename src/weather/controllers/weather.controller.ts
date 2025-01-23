@@ -1,6 +1,6 @@
 import { Injectable, Controller, Inject, Post, HttpCode, Body, Get, Param } from "@nestjs/common";
-import { WeatherResponseData } from "./weather.response.data";
-import { WeatherService } from "./weather.service";
+import { WeatherResponseData } from "../dtos/weather.response.data";
+import { WeatherService } from "../services/weather.service";
 
 @Injectable()
 @Controller('weather')

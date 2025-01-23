@@ -2,7 +2,7 @@ import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { HttpService } from "@nestjs/axios";
 import { firstValueFrom, catchError } from "rxjs";
 import { AxiosError } from "axios";
-import { GeocodeResponseData } from "./geocode.response.data";
+import { GeocodeResponseData } from "../dtos/geocode.response.data";
 
 @Injectable()
 export class GeocodeService {

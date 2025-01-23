@@ -3,8 +3,8 @@ import { ConfigService } from "@nestjs/config";
 import { HttpService } from "@nestjs/axios";
 import { catchError, firstValueFrom } from "rxjs";
 import { AxiosError } from "axios";
-import { WeatherResponseData } from "./weather.response.data";
-import { GeocodeService } from "src/geocode/geocode.service";
+import { WeatherResponseData } from "../dtos/weather.response.data";
+import { GeocodeService } from "src/geocode/services/geocode.service";
 
 @Injectable()
 export class WeatherService {

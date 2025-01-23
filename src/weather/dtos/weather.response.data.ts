@@ -1,4 +1,4 @@
-import { GeocodeResponseData } from "src/geocode/geocode.response.data";
+import { GeocodeResponseData } from "src/geocode/dtos/geocode.response.data";
 
 export class WeatherResponseData extends GeocodeResponseData {
   cloud_pct: number;
