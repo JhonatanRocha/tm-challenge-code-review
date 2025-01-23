@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "cd413d6d-461b-42f0-82fe-1c296e99599e",
+		"name": "Weather API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11473992"
+	},
+	"item": [
+		{
+			"name": "GetCity",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/weather/city/São Paulo"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCity - Unexisted City (Will Throw error)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/weather/city/Orgrimmar"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCities",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[ \"Sao Paulo\", \"Rio de Janeiro\", \"Londres\", \"Boston\" ]"
+				},
+				"url": "http://localhost:3001/weather/cities/"
+			},
+			"response": []
+		}
+	]
+}
