@@ -17,7 +17,7 @@ NotEla utiliza um serviço de geocodificação para obter as coordenadas geográ
 * Ao ajustar os erros iniciais de compilação, reparei que a
 [API meteorológica](https://www.api-ninjas.com/api/weather)
 que é consumida pelo serviço, o metodo de consulta por nome de cidade é só pra quem é **premium**.
-Talvez eles tenham atualizado isso recentemente sem o conhecimento de vocês, porém vi que a consulta por **Latitude** e **Longitude** continua **gratuito**. Dando uma navegada nas APIs que eles fornecem, achei uma API de Geolocalização que devolve o Latitude e Longitude com base no nome da cidade (também gratuito). Resolvi criar uma segunda integração, para conseguir consultar a previsão do tempo, com base na latitude e longitude.
+Talvez eles tenham atualizado isso recentemente sem o conhecimento de vocês, porém vi que a consulta por **Latitude** e **Longitude** continua **gratuito**. Dando uma navegada nas APIs que eles fornecem, achei uma [API de Geolocalização](https://www.api-ninjas.com/api/geocoding) que devolve o Latitude e Longitude com base no nome da cidade (também gratuito). Resolvi criar uma segunda integração, para conseguir consultar a previsão do tempo, com base na latitude e longitude.
 Não sei se esse era o intuito do desafio, mas ainda assim. Foi possível contornar esse problema da licensa não ser premium.
 
 * Eu tomei a liberdade de adicionar no projeto o modulo ```nestjs/config``` e criei um arquivo ```.env``` para colocar a chave da API lá.(O ideal seria colocar em uma **Secret Manager**). Já pensando em suportar configurações de ambiente de Prod , dev e local.
