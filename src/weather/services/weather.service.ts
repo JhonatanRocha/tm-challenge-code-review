@@ -27,8 +27,9 @@ export class WeatherService {
             'Content-Type': 'application/json'
           }
         };
+        const apiURL = this.configService.get('API_NINJAS_V1');
         const { data } = await firstValueFrom(
-          this.httpService.get<WeatherResponseData>(`https://api.api-ninjas.com/v1/weather?lat=${geocodeResponse.latitude}&lon=${geocodeResponse.longitude}`, requestConfig)
+          this.httpService.get<WeatherResponseData>(`${apiURL}/weather?lat=${geocodeResponse.latitude}&lon=${geocodeResponse.longitude}`, requestConfig)
             .pipe(catchError((error: AxiosError) => {
               console.log(error.response.data);
               throw error.response.data;
